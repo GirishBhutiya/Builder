@@ -1,9 +1,0 @@
-INFO: 2022/06/14 18:21:01 init.go:16: Directories successfully created.
-INFO: 2022/06/14 18:21:05 cloneRepo.go:59: C:\Program Files\Git\cmd\git.exe clone https://github.com/ilarocca/helloworld.git ./helloworld.git_1655211060/.hidden
-INFO: 2022/06/14 18:21:05 init.go:20: Repo cloned successfully.
-INFO: 2022/06/14 18:21:05 derive.go:50: Go project detected
-INFO: 2022/06/14 18:21:05 go.go:73: C:\Program Files\Go\bin\go.exe build main.go
-WARNING: 2022/06/14 18:21:07 createBuilderYaml.go:40: builder.yaml already exists
-INFO: 2022/06/14 18:21:08 go.go:87: Go project compiled successfully.
-INFO: 2022/06/14 18:21:08 init.go:27: Metadata created successfully.
-INFO: 2022/06/14 18:21:08 init.go:34: Hidden Dir is now read-only.
