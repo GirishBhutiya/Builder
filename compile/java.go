@@ -44,17 +44,21 @@ func Java(filePath string) {
 
 	var cmd *exec.Cmd
 	if buildCmd != "" {
+		log.Println("In build cmd")
 		//user specified cmd
 		buildCmdArray := strings.Fields(buildCmd)
 		cmd = exec.Command(buildCmdArray[0], buildCmdArray[1:]...)
 		cmd.Dir = fullPath // or whatever directory it's in
 	} else if buildTool == "maven" || buildTool == "mvn" {
+		log.Println("In build tool")
 		fmt.Println(buildTool)
 		cmd = exec.Command("mvn", "clean", "install")
 		cmd.Dir = fullPath // or whatever directory it's in
 	} else if buildTool == "gradle" {
+		log.Println("In gradle")
 		// gradle, etc.
 	} else {
+		log.Println("In default")
 		//default
 		cmd = exec.Command("mvn", "clean", "install")
 		cmd.Dir = fullPath // or whatever directory it's in
@@ -66,6 +70,7 @@ func Java(filePath string) {
 	logger.InfoLogger.Println(cmd)
 	err := cmd.Run()
 	if err != nil {
+		log.Println("error is :", err)
 		var outb, errb bytes.Buffer
 		cmd.Stdout = &outb
 		cmd.Stderr = &errb
